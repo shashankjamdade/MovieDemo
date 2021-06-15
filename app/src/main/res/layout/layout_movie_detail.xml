@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/margin15"
+    android:layout_marginBottom="@dimen/margin25"
+    android:id="@+id/rl_movie_detail">
+
+
+    <androidx.cardview.widget.CardView
+        app:cardElevation="5dp"
+        app:cardCornerRadius="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_centerVertical="true"
+        app:cardBackgroundColor="@android:color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:padding="@dimen/margin15"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_title"
+                android:textSize="@dimen/textsize20"
+                android:textStyle="bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:textSize="@dimen/textsize16"
+                android:text="@string/release_date"
+                android:textStyle="bold"
+                android:layout_marginTop="@dimen/margin25"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_release_date"
+                android:textSize="@dimen/textsize14"
+                android:layout_marginTop="@dimen/margin10"
+                android:text="NAME"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:textSize="@dimen/textsize16"
+                android:text="@string/geners"
+                android:textStyle="bold"
+                android:layout_marginTop="@dimen/margin25"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_geners"
+                android:textSize="@dimen/textsize14"
+                android:layout_marginTop="@dimen/margin10"
+                android:text="NAME"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:textSize="@dimen/textsize16"
+                android:text="@string/ratings"
+                android:textStyle="bold"
+                android:layout_marginTop="@dimen/margin25"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_rating"
+                android:textSize="@dimen/textsize14"
+                android:layout_marginTop="@dimen/margin10"
+                android:text="NAME"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:textSize="@dimen/textsize16"
+                android:text="@string/produced_by"
+                android:textStyle="bold"
+                android:layout_marginTop="@dimen/margin25"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_producer"
+                android:textSize="@dimen/textsize14"
+                android:layout_marginTop="@dimen/margin10"
+                android:text="NAME"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+           <androidx.appcompat.widget.AppCompatTextView
+                android:textSize="@dimen/textsize16"
+                android:text="@string/revenue"
+                android:textStyle="bold"
+                android:layout_marginTop="@dimen/margin25"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_revenue"
+                android:textSize="@dimen/textsize14"
+                android:layout_marginTop="@dimen/margin10"
+                android:text="NAME"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:textSize="@dimen/textsize16"
+                android:text="@string/overview"
+                android:textStyle="bold"
+                android:layout_marginTop="@dimen/margin25"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_overview"
+                android:textSize="@dimen/textsize14"
+                android:layout_marginTop="@dimen/margin10"
+                android:text="NAME"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

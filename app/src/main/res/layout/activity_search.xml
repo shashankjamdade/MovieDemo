@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.activity.UserListActivity">
+
+    <include
+        layout="@layout/common_toolbar"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edt_search"
+            android:layout_margin="@dimen/margin15"
+            android:padding="@dimen/margin15"
+            android:hint="@string/search_by_movie_name"
+            android:background="@drawable/rounded_corner_button_grey"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_recent_search_lable"
+            android:text="@string/recently_searched"
+            android:layout_below="@id/edt_search"
+            android:textStyle="bold"
+            android:visibility="gone"
+            android:layout_marginLeft="@dimen/margin15"
+            android:layout_marginTop="@dimen/margin15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_movies"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_recent_search_lable"
+            android:layoutAnimation="@anim/layout_animation"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="15dp" />
+
+        <include
+            layout="@layout/layout_progress"/>
+    </RelativeLayout>
+
+</LinearLayout>
