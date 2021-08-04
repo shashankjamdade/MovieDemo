@@ -38,13 +38,12 @@ class MovieDetailActivity : AppCompatActivity(), ItemClickListener {
     private var reviewAdapter: ReviewAdapter? = null
     private val viewModel: UserViewModel by viewModels()
     private var movieResultsItem: MovieResultsItem? = null
-    var isBottomlistVisible = false
+    private var isBottomlistVisible = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_movie_detail)
         initAdapter()
-//        fetchUserList();
         if (intent?.hasExtra("movie")!!) {
             movieResultsItem = intent?.getParcelableExtra("movie")
             movieResultsItem?.let {
@@ -67,17 +66,6 @@ class MovieDetailActivity : AppCompatActivity(), ItemClickListener {
                 }
             }
         })
-
-        /*nestedscrollview?.setOnScrollChangeListener { v: NestedScrollView?, scrollX: Int, scrollY: Int, oldScrollX: Int, oldScrollY: Int ->
-            if (!isBottomlistVisible) {
-                var flag = isViewVisible(rv_similar_movies)
-                CommonUtils.printLog("VIEW_VISIBLE", "${flag}")
-                if (flag) {
-                    isBottomlistVisible = true
-                    translateViewToLeftAnim(rv_similar_movies)
-                }
-            }
-        }*/
 
     }
 
@@ -245,19 +233,6 @@ class MovieDetailActivity : AppCompatActivity(), ItemClickListener {
         animation.repeatCount = 0
         animation.repeatMode = 0
         view?.startAnimation(animation)
-    }
-
-    private fun isViewVisible(view: View): Boolean {
-        val scrollBounds = Rect()
-        nestedscrollview.getDrawingRect(scrollBounds)
-        val top = view.y
-        val bottom = top + view.height
-        CommonUtils.printLog("TOP-BOTTOM", "HH ${view.height} == ${top}, ${scrollBounds.top} ==== ${bottom}, ${scrollBounds.bottom}")
-        return if (scrollBounds.top < top && scrollBounds.bottom > bottom) {
-            true //View is visible.
-        } else {
-            false //View is NOT visible.
-        }
     }
 
 

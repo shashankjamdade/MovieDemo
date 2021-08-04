@@ -20,11 +20,8 @@ class  CommonUtils{
 
     companion object{
         var toast: Toast? = null;
-        @SuppressLint("WrongConstant")
         fun createSnackBar(view: View, message: String) {
             hideSoftKeyboard(view)
-//            ColoredSnackbar.info(Snackbar.make(view, message, MESSAGE_DURATION)).show()
-
             if (!message.equals("")) {
                 toast?.run { this.cancel() }
                 toast = Toast.makeText(view.context, message, Toast.LENGTH_LONG)

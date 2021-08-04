@@ -49,7 +49,7 @@ class SearchListActivity : AppCompatActivity(), ItemClickListener {
             finish()
         }
         initAdapter()
-        if(intent?.hasExtra("res")!!){
+        if(intent!=null && intent.hasExtra("res")){
             mGetMovieListResponse = intent?.getParcelableExtra("res")
             mGetMovieListResponse?.let {
 //                setDataToUI(it?.results)
@@ -64,7 +64,7 @@ class SearchListActivity : AppCompatActivity(), ItemClickListener {
 
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
                 searchList?.clear()
-                if (s.toString().length!! > 0) {
+                if (s.toString().isNotEmpty()) {
                     text_recent_search_lable.visibility = View.GONE
                     mGetMovieListResponse?.results?.forEach {
                         if(it?.originalTitle?.toLowerCase()?.contains(s?.toString()?.trim()!!)!!){
@@ -112,7 +112,7 @@ class SearchListActivity : AppCompatActivity(), ItemClickListener {
 
 
     fun setDataToUI(itemlist: List<MovieResultsItem>?) {
-        if (itemlist != null && itemlist?.size > 0) {
+        if (itemlist != null && itemlist.size > 0) {
             movieListAdapter?.refreshAdapter(itemlist!!)
         } else {
             CommonUtils.createSnackBar(

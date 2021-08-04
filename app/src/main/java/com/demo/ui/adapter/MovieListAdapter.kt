@@ -15,6 +15,7 @@ import com.demo.model.response.MovieResultsItem
 import com.demo.util.CommonUtils
 import com.demo.util.Constants
 import kotlinx.android.synthetic.main.item_movie.view.*
+import javax.inject.Inject
 
 class MovieListAdapter(
     var movieList: ArrayList<MovieResultsItem>,

@@ -13,18 +13,16 @@ class CommonRepositoryImpl @Inject constructor(val apiService: NetworkAPIService
 
     override fun getMovieList(): MutableLiveData<GetMovieListResponse> {
         val data = MutableLiveData<GetMovieListResponse>()
-        val errorOnAPI = MutableLiveData<String>()
         CoroutineScope(Dispatchers.IO).launch {
             try {
                 val response = apiService?.getMovieList(Constants.LANGUAGE, Constants.API_KEY)
                 if (response?.isSuccessful!!) {
                     data.postValue(response?.body())
                 } else {
-                    errorOnAPI.postValue("Something went wrong::${response.message()}")
+                    data.postValue(GetMovieListResponse(results = null,dates = null))
                 }
-
             } catch (e: Exception) {
-                errorOnAPI.postValue("Something went wrong::${e.localizedMessage}")
+                data.postValue(GetMovieListResponse(results = null,dates = null))
             }
         }
         return data;

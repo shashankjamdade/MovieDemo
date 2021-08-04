@@ -52,7 +52,7 @@ data class Dates(
 @Parcelize
 data class GetMovieListResponse(
     @SerializedName("dates")
-    val dates: Dates,
+    val dates: Dates?,
     @SerializedName("page")
     val page: Int = 0,
     @SerializedName("total_pages")

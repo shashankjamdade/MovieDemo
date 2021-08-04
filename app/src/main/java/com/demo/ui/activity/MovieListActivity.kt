@@ -1,5 +1,6 @@
 package com.demo.ui.activity
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
@@ -16,6 +17,7 @@ import com.demo.ui.adapter.MovieListAdapter
 import com.demo.util.CommonUtils
 import com.demo.viewmodel.UserViewModel
 import dagger.hilt.android.AndroidEntryPoint
+import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.android.synthetic.main.activity_movielist.*
 import kotlinx.android.synthetic.main.common_toolbar.*
 import kotlinx.android.synthetic.main.item_movie.view.*
